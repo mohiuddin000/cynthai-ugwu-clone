@@ -1,0 +1,338 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "General Sans";
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+.minicircle {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #fff;
+  position: absolute;
+  z-index: 9999;
+  transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+}
+
+.bounding {
+  width: fit-content;
+
+  overflow: hidden;
+}
+.bounding .boundingelem {
+  transform: translateY(100%);
+}
+.main {
+  width: 100%;
+  background-color: black;
+  @media only screen and (max-width: 450px) {
+  }
+}
+.hero {
+  position: relative;
+  color: #fff;
+  background-color: black;
+  width: 100%;
+  height: 100vh;
+  @media only screen and (max-width: 450px) {
+  }
+}
+.nav {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 30px;
+  @media only screen and (max-width: 450px) {
+    padding: 30px 20px;
+  }
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  @media only screen and (max-width: 450px) {
+    font-size: 15px;
+  }
+}
+
+.nav h4 {
+  font-size: 18px;
+  text-transform: uppercase;
+  @media only screen and (max-width: 450px) {
+    font-size: 15px;
+  }
+}
+
+.heading {
+  margin-top: 70px;
+  @media only screen and (max-width: 450px) {
+    margin-top: 100px;
+  }
+}
+
+.heading h1 {
+  font-size: 10vw;
+  text-transform: uppercase;
+  margin-left: 30px;
+  opacity: 0.7;
+  line-height: 0.9;
+  font-weight: 900;
+  @media only screen and (max-width: 450px) {
+    font-size: 15vw;
+  }
+}
+
+#secondh1 {
+  padding-left: 12vw;
+}
+.blocktext {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  width: fit-content;
+}
+
+.heading h5 {
+  text-transform: uppercase;
+  font-size: 1.4vw;
+  padding-top: 20px;
+  @media only screen and (max-width: 450px) {
+    padding-top: 10px;
+    font-size: 13px;
+  }
+}
+
+.shortHeading {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  align-items: end;
+  padding-right: 40px;
+  line-height: 2;
+  @media only screen and (max-width: 450px) {
+    padding-right: 20px;
+    margin-top: 90px;
+    line-height: 1.5;
+  }
+}
+.shortHeading h5 {
+  font-size: 1vw;
+  text-align: right;
+  @media only screen and (max-width: 450px) {
+    font-size: 13px;
+  }
+}
+
+.hero_footer {
+  padding: 0 2vw;
+  width: 100%;
+  position: absolute;
+  bottom: 2.8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @media only screen and (max-width: 450px) {
+    padding: 0 10px;
+  }
+}
+.hero_footer a {
+  font-size: 1vw;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 600;
+  @media only screen and (max-width: 450px) {
+    font-size: 13px;
+  }
+}
+
+.hero_footer .iconset {
+  display: flex;
+  @media only screen and (max-width: 450px) {
+    display: none;
+  }
+}
+
+.hero_footer .circle {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: #888;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.second {
+  padding-top: 140px;
+  background-color: black;
+  color: #fff;
+  width: 100%;
+  padding-left: 30px;
+  padding-right: 10vw;
+  @media only screen and (max-width: 450px) {
+    padding-top: 70px;
+    padding-left: 15px;
+  }
+}
+.elem {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-top: 1px solid #888;
+
+  padding: 3vw 0;
+}
+
+.elem h1 {
+  font-size: 7.5vw;
+  opacity: 0.7;
+  text-transform: uppercase;
+  @media only screen and (max-width: 450px) {
+    font-size: 40px;
+  }
+}
+
+.elemlast {
+  border-bottom: 1px solid #888;
+}
+
+.elem img{
+  position: absolute;
+  height: 150px;
+  width: 150px;
+  z-index: 99999;
+  opacity: 0;
+  transform: translate(-50%  , -50%);
+  pointer-events: none;
+}
+
+.about {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  padding: 18vw 10vw;
+  color: #fff;
+  padding-left: 35vw;
+  padding-bottom: 5vw;
+  gap: 20px;
+  @media only screen and (max-width: 450px) {
+    padding: 100px 10px;
+    padding-bottom: 20px;
+    padding-left: 0;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.about img {
+  width: 230px;
+}
+
+.about-text {
+  width: 30rem;
+  padding-left: 30px;
+  @media only screen and (max-width: 450px) {
+    width: 90vw;
+    padding-left: 0;
+  }
+}
+.about-text h5 {
+  opacity: 0.6;
+  text-transform: uppercase;
+}
+.about-text p {
+  line-height: 1.5;
+  font-size: 18px;
+  padding-bottom: 20px;
+}
+.about-text a {
+  text-decoration: none;
+  color: #fff;
+  padding: 8px 20px;
+  border: 1px solid #888;
+  border-radius: 50px;
+}
+
+.subscribe {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+  color: #fff;
+  padding: 60px 30px;
+  padding-top: 90px;
+  @media only screen and (max-width: 450px) {
+    padding: 30px 15px;
+    padding-top: 50px;
+  }
+}
+.subscribe h5 {
+  opacity: 0.6;
+  font-weight: 500;
+  font-size: 15px;
+  text-transform: uppercase;
+  @media only screen and (max-width: 450px) {
+    font-size: 13px;
+  }
+}
+.subscribe h4 {
+  text-transform: uppercase;
+  padding-top: 10px;
+  @media only screen and (max-width: 450px) {
+    font-size: 13px;
+  }
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: black;
+  color: #fff;
+  padding: 70px 30px;
+  padding-bottom: 20px;
+  @media only screen and (max-width: 450px) {
+    padding: 50px 15px;
+    padding-bottom: 20px;
+  }
+}
+.footerone {
+  display: flex;
+  gap: 40px;
+  @media only screen and (max-width: 450px) {
+    gap: 10px;
+  }
+}
+.footerone h5 {
+  font-size: 18px;
+  @media only screen and (max-width: 450px) {
+    font-size: 10px;
+  }
+}
+.footerTwo {
+  display: flex;
+  gap: 40px;
+  @media only screen and (max-width: 450px) {
+    gap: 10px;
+    padding-left: 5px;
+  }
+}
+.footerTwo a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #fff;
+  font-size: 14px;
+  @media only screen and (max-width: 450px) {
+    font-size: 10px;
+  }
+}
